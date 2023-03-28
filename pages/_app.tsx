@@ -74,8 +74,8 @@ function	AppHead(): ReactElement {
 					]
 				}}
 				twitter={{
-					handle: '@iearnfinance',
-					site: '@iearnfinance',
+					handle: '@yAuditDAO',
+					site: '@yAuditDAO',
 					cardType: 'summary_large_image'
 				}} />
 		</>
