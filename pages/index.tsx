@@ -23,7 +23,7 @@ function	Index(): ReactElement {
 							</Button>
 						</a>
 						<a
-							href={'https://reports.yacademy.dev/'}
+							href={'https://reports.yaudit.dev/'}
 							target={'_blank'}
 							rel={'noreferrer'}>
 							<Button variant={'outlined'} className={'whitespace-nowrap'}>

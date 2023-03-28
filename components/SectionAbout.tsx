@@ -133,7 +133,7 @@ function	TabAuditing(): ReactElement {
 			<p className={'mb-4 text-base text-neutral-600 md:mb-6'}>{'During our fellowship programs, your code would be audited by everyone: residents, guest auditors, and fellows. Everyone submits their findings. Our residents will then verifty and curate the findings, and send you a unified report.'}</p>
 			<p className={'mb-6 text-base text-neutral-600'}>{'If we’re not running a fellowship at the time you requested an audit, your codebase will be audited by our residents. As there are no fellows to mentor, your codebase will be their only focus.'}</p>
 			<a
-				href={'https://reports.yacademy.dev/'}
+				href={'https://reports.yaudit.dev/'}
 				target={'_blank'}
 				rel={'noreferrer'}>
 				<Button>
