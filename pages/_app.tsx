@@ -60,13 +60,13 @@ function	AppHead(): ReactElement {
 				openGraph={{
 					type: 'website',
 					locale: 'en_US',
-					url: 'https://yaudit.ycorpo.com',
+					url: 'https://yaudit.dev',
 					site_name: 'yAudit',
 					title: 'yAudit',
 					description: 'yAudit brings an attention to detail above and beyond your standard auditing firm',
 					images: [
 						{
-							url: 'https://yaudit.ycorpo.com/og.png',
+							url: 'https://yaudit.dev/og.png',
 							width: 1200,
 							height: 675,
 							alt: 'Yearn'
