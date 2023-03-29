@@ -9,8 +9,8 @@ import type {TFeeback} from 'utils/feedbacks';
 function	SectionFeedback(): ReactElement {
 	return (
 		<section
-			id={'feedbacks'}
-			aria-label={'feedbacks'}
+			id={'feedback'}
+			aria-label={'feedback'}
 			className={'mb-28 flex flex-row items-center space-x-8 md:mb-[120px]'}>
 			<div>
 				<div>

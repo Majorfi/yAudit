@@ -116,11 +116,11 @@ function	AppHeader(): ReactElement {
 						</a>
 					</div>
 					<div>
-						<a href={'#feedbacks'} onClick={(): void => set_currentPath('/#feedbacks')}>
+						<a href={'#feedback'} onClick={(): void => set_currentPath('/#feedback')}>
 							<p
-								aria-selected={currentPath.includes('#feedbacks')}
+								aria-selected={currentPath.includes('#feedback')}
 								className={'project--nav'}>
-								{'Feedbacks'}
+								{'Feedback'}
 							</p>
 						</a>
 					</div>
