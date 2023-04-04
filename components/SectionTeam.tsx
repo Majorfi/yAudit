@@ -33,7 +33,7 @@ function	SectionTeam(): ReactElement {
 									rel={'noreferrer'}>
 									<b className={'cursor-pointer text-lg text-neutral-900 transition-colors hover:text-primary-500'}>{team.alias}</b>
 								</a>
-								<p className={'pt-0 text-neutral-900 md:pt-2'}>{team.role}</p>
+								<p className={'text-neutral-900'}>{team.role}</p>
 							</div>
 						</div>
 					))}
