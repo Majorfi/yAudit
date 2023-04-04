@@ -13,6 +13,7 @@ Name: ${req.body.name}
 Email: ${req.body.email}
 Protocol: ${req.body.protocol}
 Preferred audit completion date: ${req.body.date}
+Website: ${req.body.website}
 Github repo link: ${req.body.github}
 ------------------------------------------------------------------`);
 		return res.status(200).json(true);

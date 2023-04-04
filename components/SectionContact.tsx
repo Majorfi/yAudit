@@ -23,32 +23,42 @@ function	SectionContact(): ReactElement {
 						id={'contact-form'}
 						onSubmit={(e): void => {
 							e.preventDefault();
-							const name = (e.target as any).name.value;
-							const email = (e.target as any).email.value;
-							const subject = (e.target as any).subject.value;
-							const description = (e.target as any).description.value;
-							const website = (e.target as any).website.value;
-							axios.post('/api/contact', {
-								name,
-								email,
-								subject,
-								description,
-								website
-							}).then((): void => {
-								toast({
-									type: 'success',
-									content: 'Thank you for your message. We will get back to you as soon as possible!',
-									duration: 10000
+							try {
+								const name = (e.target as any).name.value;
+								const email = (e.target as any).email.value;
+								const protocol = (e.target as any).protocol.value;
+								const date = (e.target as any).date.value;
+								const website = (e.target as any).website.value;
+								const github = (e.target as any).github.value;
+								axios.post('/api/contact', {
+									name,
+									email,
+									protocol,
+									date,
+									github,
+									website
+								}).then((): void => {
+									toast({
+										type: 'success',
+										content: 'Thank you for your message. We will get back to you as soon as possible!',
+										duration: 10000
+									});
+								}).catch((): void => {
+									toast({
+										type: 'error',
+										content: 'We are sorry, but something went wrong. Please try again later.',
+										duration: 10000
+									});
+								}).finally((): void => {
+									(document.getElementById('contact-form') as any)?.reset?.();
 								});
-							}).catch((): void => {
+							} catch (error) {
 								toast({
 									type: 'error',
 									content: 'We are sorry, but something went wrong. Please try again later.',
 									duration: 10000
 								});
-							}).finally((): void => {
-								(document.getElementById('contact-form') as any)?.reset?.();
-							});
+							}
 						}}
 						className={'flex flex-col space-y-4 md:space-y-12'}>
 						<div className={'flex flex-col space-x-0 space-y-4 md:flex-row md:space-x-4 md:space-y-0'}>
@@ -81,7 +91,8 @@ function	SectionContact(): ReactElement {
 							className={'border-none bg-neutral-200'}
 							name={'donedate'}
 							placeholder={'Preferred audit completion date'}
-							type={'date'} />
+							type={'date'}
+							min={new Date().toISOString().split('T')[0]} />
 						<input
 							className={'border-none bg-neutral-200'}
 							name={'github'}
