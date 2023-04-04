@@ -11,9 +11,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 You got a new message from your website contact form:
 Name: ${req.body.name}
 Email: ${req.body.email}
-Website: ${req.body.website}
-Subject: ${req.body.subject}
-Message: ${req.body.description}
+Protocol: ${req.body.protocol}
+Preferred audit completion date: ${req.body.date}
+Github repo link: ${req.body.github}
 ------------------------------------------------------------------`);
 		return res.status(200).json(true);
 	} catch (error) {

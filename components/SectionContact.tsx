@@ -56,33 +56,37 @@ function	SectionContact(): ReactElement {
 								className={'border-none bg-neutral-200'}
 								type={'text'}
 								name={'name'}
-								placeholder={'Name'}
+								placeholder={'Your Name'}
 								required />
 							<input
 								className={'border-none bg-neutral-200'}
-								type={'url'}
-								name={'website'}
-								placeholder={'Website'}
+								type={'email'}
+								name={'email'}
+								placeholder={'Your email'}
 								required />
 						</div>
 						<input
 							className={'border-none bg-neutral-200'}
-							type={'email'}
-							name={'email'}
-							placeholder={'E-mail'}
+							type={'text'}
+							name={'protocol'}
+							placeholder={'Protocol Name'}
 							required />
 						<input
 							className={'border-none bg-neutral-200'}
-							type={'text'}
-							name={'subject'}
-							placeholder={'Subject'}
+							type={'url'}
+							name={'website'}
+							placeholder={'Website'}
 							required />
-						<textarea
+						<input
 							className={'border-none bg-neutral-200'}
-							name={'description'}
-							placeholder={'Description'}
-							rows={6}
-							required />
+							name={'donedate'}
+							placeholder={'Preferred audit completion date'}
+							type={'date'} />
+						<input
+							className={'border-none bg-neutral-200'}
+							name={'github'}
+							placeholder={'Github repo link'}
+							type={'url'} />
 						<Button>
 							{'Send request'}
 						</Button>
