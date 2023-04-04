@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 const runtimeCaching = require('next-pwa/cache');
+const {withPlausibleProxy} = require('next-plausible');
 const withPWA = require('next-pwa')({
 	dest: './public/',
 	register: true,
@@ -8,13 +9,25 @@ const withPWA = require('next-pwa')({
 	buildExcludes: [/middleware-manifest.json$/]
 });
 
-module.exports = withPWA({
+module.exports = withPlausibleProxy()(withPWA({
 	images: {
 		domains: [
 			'rawcdn.githack.com',
 			'raw.githubusercontent.com',
 			'placehold.co'
 		]
+	},
+	async rewrites() {
+		return [
+			{
+				source: '/js/script.js',
+				destination: 'https://plausible.io/js/script.js'
+			},
+			{
+				source: '/api/event',
+				destination: 'https://plausible.io/api/event'
+			}
+		];
 	},
 	env: {
 		/* 🔵 - Yearn Finance **************************************************
@@ -37,5 +50,5 @@ module.exports = withPWA({
 		TELEGRAM_BOT: process.env.TELEGRAM_BOT,
 		TELEGRAM_CHAT: process.env.TELEGRAM_CHAT
 	}
-});
+}));
 

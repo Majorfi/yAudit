@@ -19,7 +19,10 @@ function	AppHead(): ReactElement {
 				<meta name={'description'} content={'yAudit'} />
 				<meta name={'msapplication-TileColor'} content={'#000000'} />
 				<meta name={'theme-color'} content={'#000000'} />
-
+				<script
+					defer
+					data-domain={'yaudit.dev'}
+					src={'/js/script.js'} />
 				<link
 					rel={'shortcut icon'}
 					type={'image/x-icon'}
