@@ -27,8 +27,8 @@ function	SectionContact(): ReactElement {
 								const name = (e.target as any).name.value;
 								const email = (e.target as any).email.value;
 								const protocol = (e.target as any).protocol.value;
-								const date = (e.target as any).date.value;
 								const website = (e.target as any).website.value;
+								const date = (e.target as any).date.value;
 								const github = (e.target as any).github.value;
 								axios.post('/api/contact', {
 									name,
@@ -53,6 +53,7 @@ function	SectionContact(): ReactElement {
 									(document.getElementById('contact-form') as any)?.reset?.();
 								});
 							} catch (error) {
+								console.log(error);
 								toast({
 									type: 'error',
 									content: 'We are sorry, but something went wrong. Please try again later.',
@@ -72,7 +73,7 @@ function	SectionContact(): ReactElement {
 								className={'border-none bg-neutral-200'}
 								type={'email'}
 								name={'email'}
-								placeholder={'Your email'}
+								placeholder={'Your Email'}
 								required />
 						</div>
 						<input
@@ -89,7 +90,7 @@ function	SectionContact(): ReactElement {
 							required />
 						<input
 							className={'border-none bg-neutral-200'}
-							name={'donedate'}
+							name={'date'}
 							placeholder={'Preferred audit completion date'}
 							type={'date'}
 							min={new Date().toISOString().split('T')[0]} />
