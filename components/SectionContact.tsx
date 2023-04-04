@@ -28,8 +28,8 @@ function	SectionContact(): ReactElement {
 								const email = (e.target as any).email.value;
 								const protocol = (e.target as any).protocol.value;
 								const website = (e.target as any).website.value;
-								const date = (e.target as any).date.value;
-								const github = (e.target as any).github.value;
+								const date = (e.target as any)?.date?.value || 'Not specified';
+								const github = (e.target as any)?.github?.value || 'Not specified';
 								axios.post('/api/contact', {
 									name,
 									email,
@@ -61,44 +61,70 @@ function	SectionContact(): ReactElement {
 								});
 							}
 						}}
-						className={'flex flex-col space-y-4 md:space-y-12'}>
+						className={'flex flex-col space-y-4 md:space-y-8'}>
 						<div className={'flex flex-col space-x-0 space-y-4 md:flex-row md:space-x-4 md:space-y-0'}>
+							<label className={'flex flex-col'}>
+								<p className={'pb-1 text-xs text-neutral-500'}>
+									{'Your Name*'}
+								</p>
+								<input
+									className={'border-none bg-neutral-200'}
+									type={'text'}
+									name={'name'}
+									required />
+							</label>
+							<label className={'flex flex-col'}>
+								<p className={'pb-1 text-xs text-neutral-500'}>
+									{'Your Email*'}
+								</p>
+								<input
+									className={'border-none bg-neutral-200'}
+									type={'email'}
+									name={'email'}
+									required />
+							</label>
+						</div>
+						<label className={'flex flex-col'}>
+							<p className={'pb-1 text-xs text-neutral-500'}>
+								{'Protocol Name*'}
+							</p>
 							<input
 								className={'border-none bg-neutral-200'}
 								type={'text'}
-								name={'name'}
-								placeholder={'Your Name'}
+								name={'protocol'}
 								required />
+						</label>
+						<label className={'flex flex-col'}>
+							<p className={'pb-1 text-xs text-neutral-500'}>
+								{'Website URL*'}
+							</p>
 							<input
 								className={'border-none bg-neutral-200'}
-								type={'email'}
-								name={'email'}
-								placeholder={'Your Email'}
+								type={'url'}
+								name={'website'}
 								required />
-						</div>
-						<input
-							className={'border-none bg-neutral-200'}
-							type={'text'}
-							name={'protocol'}
-							placeholder={'Protocol Name'}
-							required />
-						<input
-							className={'border-none bg-neutral-200'}
-							type={'url'}
-							name={'website'}
-							placeholder={'Website'}
-							required />
-						<input
-							className={'border-none bg-neutral-200'}
-							name={'date'}
-							placeholder={'Preferred audit completion date'}
-							type={'date'}
-							min={new Date().toISOString().split('T')[0]} />
-						<input
-							className={'border-none bg-neutral-200'}
-							name={'github'}
-							placeholder={'Github repo link'}
-							type={'url'} />
+						</label>
+
+						<label className={'flex flex-col'}>
+							<p className={'pb-1 text-xs text-neutral-500'}>
+								{'Preferred audit completion date'}
+							</p>
+							<input
+								className={'border-none bg-neutral-200'}
+								name={'date'}
+								type={'date'}
+								min={new Date().toISOString().split('T')[0]} />
+						</label>
+
+						<label className={'flex flex-col'}>
+							<p className={'pb-1 text-xs text-neutral-500'}>
+								{'Github repo link'}
+							</p>
+							<input
+								className={'border-none bg-neutral-200'}
+								name={'github'}
+								type={'url'} />
+						</label>
 						<Button>
 							{'Send request'}
 						</Button>
