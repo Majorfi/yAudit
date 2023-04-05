@@ -48,7 +48,7 @@ const	TEAM: TTeam[] = [
 		alias: 'NibblerExpress',
 		role: 'Hacker',
 		avatar: '/team/nibblerexpress.jpeg',
-		URL: 'https://github.com/'
+		URL: 'https://github.com/NibblerExpress'
 	},
 	{
 		alias: 'invader-tak',
