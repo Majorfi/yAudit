@@ -29,6 +29,30 @@ module.exports = withPlausibleProxy()(withPWA({
 			}
 		];
 	},
+	redirects() {
+		return [
+			{
+				source: '/twitter',
+				destination: 'https://twitter.com/yAuditDAO',
+				permanent: true
+			},
+			{
+				source: '/discord',
+				destination: 'https://discord.gg/s9njyPNUca',
+				permanent: true
+			},
+			{
+				source: '/github',
+				destination: 'https://github.com/yaudit',
+				permanent: true
+			},
+			{
+				source: '/yacademy',
+				destination: 'yacademy.dev',
+				permanent: true
+			}
+		];
+	},
 	env: {
 		/* 🔵 - Yearn Finance **************************************************
 		** Config over the RPC

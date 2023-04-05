@@ -3,12 +3,12 @@ import	React		from	'react';
 import type {ReactElement, SVGProps} from 'react';
 
 function	LogoTimeless(props: SVGProps<SVGSVGElement>): ReactElement {
-	const defaultProps = {width: 37, height: 40};
+	const defaultProps = {width: 40, height: 40};
 	props = {...defaultProps, ...props};
 
 	return (
 		<svg
-			viewBox={'0 0 37 40'}
+			viewBox={'0 0 40 40'}
 			fill={'none'}
 			xmlns={'http://www.w3.org/2000/svg'}
 			{...props}>

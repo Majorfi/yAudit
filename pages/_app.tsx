@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import {useRouter} from 'next/router';
 import {DefaultSeo} from 'next-seo';
 import {WithYearn} from '@yearn-finance/web-lib/contexts/WithYearn';
@@ -175,8 +176,25 @@ function	AppWrapper(props: AppProps): ReactElement {
 						router={props.router}
 						{...pageProps} />
 				</div>
-				<div className={'col-span-12 mx-auto my-6 w-full'}>
-					<p className={'text-center text-base text-neutral-600'}>{'All Right Reserved! yAudit © 2023 Copyright'}</p>
+				<div className={'col-span-12 mx-auto my-6 flex w-full flex-col justify-center'}>
+					<p className={'pb-2 text-center text-base text-neutral-600'}>
+						{'All Right Reserved! yAudit © 2023 Copyright'}
+					</p>
+					<div className={'text-center text-sm text-neutral-600'}>
+						<Link
+							className={'cursor-pointer hover:underline'}
+							href={'/github'}
+							target={'_blank'}>
+							{'Github'}
+						</Link>
+						{' - '}
+						<Link
+							className={'cursor-pointer hover:underline'}
+							href={'/twitter'}
+							target={'_blank'}>
+							{'Twitter'}
+						</Link>
+					</div>
 				</div>
 			</div>
 		</>

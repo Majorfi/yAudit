@@ -15,7 +15,7 @@ function	Index(): ReactElement {
 			<section aria-label={'hero'} className={'mt-[85px] mb-[70px] grid grid-cols-12 items-center'}>
 				<div className={'col-span-12 md:col-span-7'}>
 					<h1 className={'mb-6 whitespace-pre break-words text-6xl text-neutral-900 md:text-8xl'}>{'Welcome to\nyAudit'}</h1>
-					<p className={'text-lg'}>{'Avoid the war room'}</p>
+					<p className={'text-lg'}>{'Avoid the war room. Shield up.'}</p>
 					<div className={'mt-4 flex w-full flex-row space-x-3 md:space-x-4'}>
 						<a href={'#contact'}>
 							<Button className={'whitespace-nowrap'}>

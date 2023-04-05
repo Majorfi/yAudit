@@ -61,6 +61,12 @@ const	TEAM: TTeam[] = [
 		role: 'Hacker',
 		avatar: '/team/spalen0.jpeg',
 		URL: 'https://github.com/spalen0'
+	},
+	{
+		alias: 'Ali Atiia',
+		role: 'OG',
+		avatar: '/team/ali.png',
+		URL: 'https://github.com/aliatiia'
 	}
 ];
 
