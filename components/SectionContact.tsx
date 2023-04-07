@@ -30,13 +30,15 @@ function	SectionContact(): ReactElement {
 								const website = (e.target as any).website.value;
 								const date = (e.target as any)?.date?.value || 'Not specified';
 								const github = (e.target as any)?.github?.value || 'Not specified';
+								const message = (e.target as any).message.value;
 								axios.post('/api/contact', {
 									name,
 									email,
 									protocol,
 									date,
 									github,
-									website
+									website,
+									message
 								}).then((): void => {
 									toast({
 										type: 'success',
@@ -125,6 +127,17 @@ function	SectionContact(): ReactElement {
 								name={'github'}
 								type={'url'} />
 						</label>
+
+						<label className={'flex flex-col'}>
+							<p className={'pb-1 text-xs text-neutral-500'}>
+								{'Additional information'}
+							</p>
+							<textarea
+								className={'border-none bg-neutral-200'}
+								name={'message'}
+								rows={4} />
+						</label>
+
 						<Button>
 							{'Send request'}
 						</Button>

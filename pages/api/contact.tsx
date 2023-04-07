@@ -15,6 +15,7 @@ Protocol: ${req.body.protocol}
 Preferred audit completion date: ${req.body.date}
 Website: ${req.body.website}
 Github repo link: ${req.body.github}
+Additional information: ${req.body.message}
 ------------------------------------------------------------------`);
 		return res.status(200).json(true);
 	} catch (error) {
