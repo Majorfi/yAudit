@@ -16,7 +16,7 @@ function	SectionTeam(): ReactElement {
 					<h2 className={'mb-4 text-3xl font-bold text-neutral-900'}>{'Meet the Team'}</h2>
 					<p className={'text-base text-neutral-600'}>{'yAudit\'s technical team consists of gigabrains, gigachads, and gigabraingigachads. If you\'re in the smart contract security space, you may already know them.'}</p>
 				</div>
-				<div className={'mt-10 grid w-full max-w-5xl grid-cols-2 gap-4 md:grid-cols-5 md:gap-6'}>
+				<div className={'mt-10 grid w-full max-w-5xl grid-cols-2 gap-4 md:grid-cols-4 md:gap-6'}>
 					{TEAM?.map((team: TTeam): ReactElement => (
 						<div key={team.alias} className={'flex h-full flex-col bg-neutral-200'}>
 							<Image
