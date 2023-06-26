@@ -25,7 +25,7 @@ function	SectionContact(): ReactElement {
 							e.preventDefault();
 							try {
 								const name = (e.target as any).name.value;
-								const email = (e.target as any).email.value;
+								const tguser = (e.target as any).tguser.value;
 								const protocol = (e.target as any).protocol.value;
 								const website = (e.target as any).website.value;
 								const date = (e.target as any)?.date?.value || 'Not specified';
@@ -33,7 +33,7 @@ function	SectionContact(): ReactElement {
 								const message = (e.target as any).message.value;
 								axios.post('/api/contact', {
 									name,
-									email,
+									tguser,
 									protocol,
 									date,
 									github,
@@ -77,12 +77,12 @@ function	SectionContact(): ReactElement {
 							</label>
 							<label className={'flex flex-col'}>
 								<p className={'pb-1 text-xs text-neutral-500'}>
-									{'Your Email*'}
+									{'Your Telegram Username*'}
 								</p>
 								<input
 									className={'border-none bg-neutral-200'}
-									type={'email'}
-									name={'email'}
+									type={'text'}
+									name={'tguser'}
 									required />
 							</label>
 						</div>
