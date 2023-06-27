@@ -10,7 +10,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 -------------------------------------------------------------------
 You got a new message from your website contact form:
 Name: ${req.body.name}
-Email: ${req.body.email}
+Telegram username: ${req.body.tguser}
 Protocol: ${req.body.protocol}
 Preferred audit completion date: ${req.body.date}
 Website: ${req.body.website}
