@@ -67,7 +67,7 @@ function	SectionContact(): ReactElement {
 						<div className={'flex flex-col space-x-0 space-y-4 md:flex-row md:space-x-4 md:space-y-0'}>
 							<label className={'flex flex-col'}>
 								<p className={'pb-1 text-xs text-neutral-500'}>
-									{'Your Name*'}
+									{'Your name*'}
 								</p>
 								<input
 									className={'border-none bg-neutral-200'}
@@ -77,7 +77,7 @@ function	SectionContact(): ReactElement {
 							</label>
 							<label className={'flex flex-col'}>
 								<p className={'pb-1 text-xs text-neutral-500'}>
-									{'Your Telegram Username*'}
+									{'Your Telegram username*'}
 								</p>
 								<input
 									className={'border-none bg-neutral-200'}
@@ -88,7 +88,7 @@ function	SectionContact(): ReactElement {
 						</div>
 						<label className={'flex flex-col'}>
 							<p className={'pb-1 text-xs text-neutral-500'}>
-								{'Protocol Name*'}
+								{'Protocol name*'}
 							</p>
 							<input
 								className={'border-none bg-neutral-200'}
@@ -130,7 +130,7 @@ function	SectionContact(): ReactElement {
 
 						<label className={'flex flex-col'}>
 							<p className={'pb-1 text-xs text-neutral-500'}>
-								{'Additional information'}
+								{'Scope and additional information'}
 							</p>
 							<textarea
 								className={'border-none bg-neutral-200'}
