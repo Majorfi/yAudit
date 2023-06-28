@@ -66,7 +66,7 @@ function	SectionContact(): ReactElement {
 									}, 10000);
 								});
 							} catch (error) {
-								console.log(error);
+								console.error(error);
 								toast({
 									type: 'error',
 									content: 'We are sorry, but something went wrong. Please try again later.',
