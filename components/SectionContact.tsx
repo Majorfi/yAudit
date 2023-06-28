@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import axios from 'axios';
 import {Button} from '@yearn-finance/web-lib/components/Button';
 import {yToast} from '@yearn-finance/web-lib/components/yToast';
@@ -7,6 +7,8 @@ import type {ReactElement} from 'react';
 
 function	SectionContact(): ReactElement {
 	const {toast} = yToast();
+	const [isDisabled, set_isDisabled] = useState(false);
+	const [isBusy, set_isBusy] = useState(false);
 
 	return (
 		<section
@@ -23,6 +25,11 @@ function	SectionContact(): ReactElement {
 						id={'contact-form'}
 						onSubmit={(e): void => {
 							e.preventDefault();
+							if (isBusy || isDisabled) {
+								return;
+							}
+							set_isBusy(true);
+							set_isDisabled(true);
 							try {
 								const name = (e.target as any).name.value;
 								const tguser = (e.target as any).tguser.value;
@@ -53,6 +60,10 @@ function	SectionContact(): ReactElement {
 									});
 								}).finally((): void => {
 									(document.getElementById('contact-form') as any)?.reset?.();
+									set_isBusy(false);
+									setTimeout((): void => {
+										set_isDisabled(false);
+									}, 10000);
 								});
 							} catch (error) {
 								console.log(error);
@@ -138,7 +149,7 @@ function	SectionContact(): ReactElement {
 								rows={4} />
 						</label>
 
-						<Button>
+						<Button isDisabled={isDisabled} isBusy={isBusy}>
 							{'Send request'}
 						</Button>
 					</form>
