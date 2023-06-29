@@ -3,6 +3,9 @@ import {Telegram} from 'telegraf';
 import type {NextApiRequest, NextApiResponse} from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<boolean>): Promise<void> {
+	if (req.headers['user-agent']?.includes('python-requests')) {
+		return res.status(403).json(false);
+	}
 	const telegram = new Telegram(process.env.TELEGRAM_BOT as string);
 	try {
 		await telegram.sendMessage(
