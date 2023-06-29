@@ -72,7 +72,8 @@ module.exports = withPlausibleProxy()(withPWA({
 		ALCHEMY_KEY: process.env.ALCHEMY_KEY,
 		INFURA_KEY: process.env.INFURA_KEY,
 		TELEGRAM_BOT: process.env.TELEGRAM_BOT,
-		TELEGRAM_CHAT: process.env.TELEGRAM_CHAT
+		TELEGRAM_CHAT: process.env.TELEGRAM_CHAT,
+		IP_TO_BLOCK: process.env.IP_TO_BLOCK
 	}
 }));
 
