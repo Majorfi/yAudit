@@ -178,7 +178,7 @@ function	AppWrapper(props: AppProps): ReactElement {
 				</div>
 				<div className={'col-span-12 mx-auto my-6 flex w-full flex-col justify-center'}>
 					<p className={'pb-2 text-center text-base text-neutral-600'}>
-						{'All Right Reserved! yAudit © 2023 Copyright'}
+						{'All Right Reserved! yAudit © 2024 Copyright'}
 					</p>
 					<div className={'text-center text-sm text-neutral-600'}>
 						<Link
