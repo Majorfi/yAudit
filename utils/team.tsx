@@ -8,12 +8,12 @@ export type TTeam = {
 }
 
 const	TEAM: TTeam[] = [
-	{
+	/* {
 		alias: 'Blockdev',
 		role: 'Hacker',
 		avatar: '/team/blockdev.jpeg',
 		URL: 'https://github.com/0xbok'
-	},
+	}, */
 	{
 		alias: 'engn33r',
 		role: 'Hacker',
@@ -25,13 +25,13 @@ const	TEAM: TTeam[] = [
 		role: 'Hacker',
 		avatar: '/team/jackson.jpeg',
 		URL: 'https://github.com/sjkelleyjr'
-	},
+	}, /*
 	{
 		alias: 'Usmann',
 		role: 'Hacker',
 		avatar: '/team/usmann.jpeg',
 		URL: 'https://github.com/usmannk'
-	},
+	}, */
 	{
 		alias: 'prady',
 		role: 'Hacker',
@@ -75,11 +75,29 @@ const	TEAM: TTeam[] = [
 		URL: 'https://github.com/HHK-ETH'
 	},
 	{
+		alias: 'DrasticWatermelon',
+		role: 'Hacker',
+		avatar: '/team/watermelon.jpeg',
+		URL: 'https://github.com/DrasticWatermelon'
+	},
+	{
+		alias: 'fedebianu',
+		role: 'Hacker',
+		avatar: '/team/fedebianu.jpeg',
+		URL: 'https://github.com/federicobianucci'
+	},
+	{
+		alias: '_eperezok',
+		role: 'Hacker',
+		avatar: '/team/ez.jpeg',
+		URL: 'https://github.com/EperezOk'
+	},
+	/* {
 		alias: 'Ali Atiia',
 		role: 'OG',
 		avatar: '/team/ali.jpeg',
 		URL: 'https://github.com/aliatiia'
-	}
+	} */
 ];
 
 
