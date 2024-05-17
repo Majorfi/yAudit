@@ -84,7 +84,7 @@ const	TEAM: TTeam[] = [
 		alias: 'fedebianu',
 		role: 'Hacker',
 		avatar: '/team/fedebianu.jpeg',
-		URL: 'https://github.com/federicobianucci'
+		URL: 'https://github.com/fedebianu'
 	},
 	{
 		alias: '_eperezok',
