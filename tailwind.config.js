@@ -1,7 +1,6 @@
 const {join} = require('path');
 const defaultTheme = require('tailwindcss/defaultTheme');
 
-
 module.exports = {
 	presets: [require('@yearn-finance/web-lib/tailwind.config.cjs')],
 	content: [

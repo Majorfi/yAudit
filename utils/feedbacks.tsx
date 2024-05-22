@@ -20,8 +20,17 @@ const	FEEDBACKS: TFeeback[] = [
 		content: 'Amazing stuff, really pleased with it. Very solid work from yourself and the yAcademy troop.'
 	},
 	{
-		from: 'Anon Protocol',
-		content: 'Just gave a quick look, but wow. This is extremely thorough. Thank you so much.'
+		from: 'Curve Finance',
+		content: 'yAudit looked at our core infra in a very timely manner, made availabilities based on the urgency of our needs and helped deliver a very good audit of a codebase even though they were not the first external reviewers.'
+	},
+	{
+		from: 'Stryke',
+		content: 'Great audit partners and overall experience from scoping to audits. yAudits is currently securing Stryke\'s mainnet contracts as well as partners building on Stryke\'s underlying tech'
+	},
+	{
+		from: 'Sickle',
+		content: 'yAudit have been a pleasure to work with, digging deep into the codebase and discovering edge cases. Will be staying with them!'
+
 	}
 ];
 
