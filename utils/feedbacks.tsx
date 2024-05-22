@@ -28,7 +28,7 @@ const	FEEDBACKS: TFeeback[] = [
 		content: 'Great audit partners and overall experience from scoping to audits. yAudits is currently securing Stryke\'s mainnet contracts as well as partners building on Stryke\'s underlying tech'
 	},
 	{
-		from: 'Sickle',
+		from: 'vfat.io',
 		content: 'yAudit have been a pleasure to work with, digging deep into the codebase and discovering edge cases. Will be staying with them!'
 
 	}
