@@ -119,11 +119,11 @@ const	CUSTOMERS: TCustomer[] = [
 		logo: <Image src={'/customers/temple.jpg'} alt={'Temple'} width={100} height={100} className={'grayscale'} />
 	},
 	{
-		name: 'Sickle',
+		name: 'vfat.io',
 		description: 'Web3 portfolio viewer and much, much more in the works.',
 		docURI: 'vfat.io',
 		URI: 'vfat.io/yield',
-		logo: <Image src={'/customers/sickle.jpg'} alt={'Sickle'} width={100} height={100} className={'grayscale'} />
+		logo: <Image src={'/customers/sickle.jpg'} alt={'vfat.io'} width={100} height={100} className={'grayscale'} />
 	},
 	{
 		name: 'Euler',
@@ -159,6 +159,13 @@ const	CUSTOMERS: TCustomer[] = [
 		docURI: 'https://docs.cove.finance/introduction',
 		URI: 'https://www.cove.finance/',
 		logo: <Image src={'/customers/cove.svg'} alt={'Cove'} width={100} height={100} className={'grayscale'} />
+	},
+	{
+		name: 'Rysk',
+		description: 'A DeFi protocol offering a CEX-like trading experience for derivatives, featuring deep liquidity through a market-making vault network.',
+		docURI: 'https://docs.rysk.finance/',
+		URI: 'https://www.rysk.finance/',
+		logo: <Image src={'/customers/rysk.jpg'} alt={'rysk'} width={100} height={100} className={'grayscale'} />
 	}
 ];
 
